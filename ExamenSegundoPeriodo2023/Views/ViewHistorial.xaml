@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenSegundoPeriodo2023.Views.ViewHistorial"
+            xmlns:local="clr-namespace:ExamenSegundoPeriodo2023.ViewModels"
+             Title="Historial">
+
+
+    <StackLayout  Padding="20" BackgroundColor="#2d4c9b">
+        <!-- Label para mostrar la información del usuario -->
+        <Label Text="INFORMACIÓN DEL USUARIO" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontSize="20" FontAttributes="Bold"/>
+
+        <Label Text="{Binding UsuarioInfo}" TextColor="WHITE" FontSize="20"/>
+
+
+        <Label Text="LICENCIAS DEL USUARIO" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontSize="20" FontAttributes="Bold"/>
+
+        <ListView ItemsSource="{Binding Licencias}"  HeightRequest="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+
+                            <Label Text="{Binding TipoLicencia}" TextColor="WHITE" FontSize="20"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Image Source="gobierno.png" Margin="10,10,10,50"/>
+
+    </StackLayout>  
+
+
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExamenSegundoPeriodo2023.ViewModels"
+             x:Class="ExamenSegundoPeriodo2023.Views.ViewUsuario"
+             Title="Usuario">
+
+
+    <StackLayout Padding="20" BackgroundColor="#2d4c9b" >
+        <Image Source="dnvt.png" Margin="10,60,10,10"/>
+        <Label Text="DIRECCIÓN NACIONAL DE VIALIDAD Y TRANSPORTE" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontSize="20" FontAttributes="Bold"/>
+        <Entry Placeholder="Nombre" Text="{Binding Nombre}" />
+            <Entry Placeholder="Apellido" Text="{Binding Apellido}" />
+            <Entry Placeholder="Edad" Text="{Binding Edad}" />
+            <Entry Placeholder="Identidad" Text="{Binding Identidad}" />
+        <Button Text="Guardar Información" Command="{Binding GuardarInformacionCommand}" BackgroundColor="#2196f5" />
+
+            
+    </StackLayout>
+    
+    
+    
+    
+</ContentPage>

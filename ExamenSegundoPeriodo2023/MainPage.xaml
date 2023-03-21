@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenSegundoPeriodo2023.MainPage"
+            xmlns:local="clr-namespace:ExamenSegundoPeriodo2023.Views">
+         
+ 
+        <local:ViewUsuario></local:ViewUsuario>
+        <local:ViewLicencia></local:ViewLicencia>
+        <local:ViewHistorial></local:ViewHistorial>
+ 
+</TabbedPage>

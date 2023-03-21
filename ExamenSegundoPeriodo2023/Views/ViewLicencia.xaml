@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ExamenSegundoPeriodo2023s" xmlns:examensegundoperiodo2023="clr-namespace:ExamenSegundoPeriodo2023"  
+             x:Class="ExamenSegundoPeriodo2023.Views.ViewLicencia"
+             Title="Licencia" >
+
+
+    <StackLayout Padding="20" BackgroundColor="#2d4c9b" >
+        
+        <Label Text="SISTEMA DE LICENCIA" HorizontalTextAlignment="Center" TextColor="#FFFFFF" FontSize="20" FontAttributes="Bold"/>
+        <Label Text="Tipo de Vehiculo" FontSize="Title" TextColor="#fff"/>
+        
+        <Picker x:Name="vehiculoPicker"
+        Title="Vehiculo"
+        ItemsSource="{Binding Vehiculos}"
+        SelectedIndex="{Binding SelectedIndex}">
+        </Picker>
+ 
+        <Label Text="Tipo de Licencia Requerido" FontSize="Title" TextColor="#fff"/>
+        <Entry x:Name="licenciaRequeridaEntry" Text="{Binding LicenciaRequerida}" IsReadOnly="True" />
+
+        <Button Text="Consultar Licencia " BackgroundColor="#2196f5"
+        Command="{Binding VehiculoSeleccionadoCommand}"
+        CommandParameter="{Binding SelectedItem, Source={x:Reference vehiculoPicker}}"/>
+
+
+        <Button Text="Guardar Licencia" Command="{Binding GuardarLicenciaCommand}" BackgroundColor="#003f76"/>
+        <Label x:Name="lblLicenciaGuardada" />
+        <Image Source="logodnvt2.png" Margin="10,190,10,10"/>
+
+
+    </StackLayout>
+
+
+</ContentPage>
